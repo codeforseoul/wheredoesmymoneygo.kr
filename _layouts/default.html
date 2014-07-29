@@ -1,0 +1,73 @@
+---
+layout: blank
+---
+
+
+<header>
+  <div class="container">
+    <a class="okfn-ribbon" href="http://okfn.org/" title="An Open Knowledge Foundation Project">OKFN</a>
+    <div id="logo">
+      <a href="/">
+        <img src="img/logo.png" alt="{{ site.title }}">
+        <div id="claim">
+          여러분이 낸 세금이 어느 곳에 얼마나 쓰였는지 보여줍니다.
+        </div>
+      </a>
+    </div>
+    <nav>
+      <ul class="nav nav-tabs">
+        <li><a href="about.html">이 프로젝트는?</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="team.html">만든 사람들</a></li>
+        <li><a href="bubbletree-map.html">지역별 지출 내역</a></li>
+        <li><a href="dailybread.html">일일 지출 내역</a></li>
+      </ul>
+    </nav>
+    <script type="text/javascript">
+      $(function() {
+        $('ul.nav-tabs a').each(function(i,el) {
+          if (window.location.href.indexOf($(el).attr('href')) > 0) {
+        $(el).addClass('active');
+          }
+        });
+      });
+    </script>
+  </div>
+</header>
+
+<div class="container">
+  {{ content }}
+</div>
+
+<footer>
+  <div class="inner">
+    <div class="container">
+      <p>
+        Where Does My Money Go? 프로젝트는 <a href="http://openspending.org">OpenSpending</a>을 활용한 <a href="https://openspending.org/tax_korea_updated">세금 데이터</a>를 활용해 만들어졌습니다.<br/>
+        <a href="http://okfn.org">Open Knowledge Foundation</a>의 프로젝트로 <a href="http://www.channel4.com/programmes/4ip">Channel 4의 4iP</a>으로부터 시작되었습니다.
+      </p>
+
+      <ul class="footer-links span4 pull-left">
+        <li><a href="http://openspending.org">OpenSpending</a></li>
+        <li><a href="http://wheredoesmymoneygo.org">Where Does My Money Go?</a></li>
+        <li><a href="http://thedatahub.org">TheDataHub</a></li>
+        <li><a href="http://okfnlabs.org">OKFN Labs</a></li>
+        <li><a href="http://yourtopia.net">YourTopia</a></li>
+      </ul>
+      <ul class="footer-links span4 pull-left">
+        <li><a href="team.html">만든 사람들</a></li>
+        <li><a href="http://codenamu.org">코드나무</a> 연락하기</li>
+        <li><a href="https://github.com/codeforseoul/wheredoesmymoneygo.kr">소스코드</a></li>
+        <li><a href="http://okfn.org/privacy-policy/">Privacy Policy</a></li>
+      </ul>
+
+      All <a href="http://creativecommons.org/licenses/by/3.0/">content</a>,
+      <a href="http://www.gnu.org/licenses/agpl.html">code</a>
+      and <a href="http://opendatacommons.org/licenses/odbl/">data</a> is
+      openly licensed in accordance with the
+      <a href="http://opendefinition.org/">open definition</a>.
+      <br/>
+      <a href="http://opendefinition.org"><img src="http://assets.okfn.org/images/ok_buttons/od_80x15_blue.png" alt="Open Content" /></a>
+    </div>
+  </div>
+</footer>

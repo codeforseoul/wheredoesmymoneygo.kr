@@ -1,0 +1,89 @@
+---
+layout: default
+title: The Daily Bread
+---
+
+<div class="container">
+
+  <div id="dailybread">
+    <h2 class="page-header">일일 지출 내역 <small> 하루동안 대한민국 납세자가 지불하는 비용</small></h2>
+
+    <div id="preloader" style="text-align: center; padding: 100px"><img src="/img/ajax-loader.gif" style="vertical-align:top" /> &nbsp;<span class="txt">자바스크립트 라이브러리를 불러오는 중입니다.</span></div>
+
+    <div id="content-wrap" style="display:none">
+      <div id="db-topbar" class="layout-row layout-3col-15-70-15">
+       <div id="db-salary" class="layout-col layout-col-1">
+        <h2>연봉</h2>
+        <p>£22,000</p>
+       </div>
+
+       <div id="db-slider" class="layout-col layout-col-2">
+        <h2>연봉을 선택하세요</h2>
+        <div class="wdmmg-slider"></div>
+       </div>
+
+       <div id="db-tax" class="layout-col layout-col-3">
+        <h2>종합소득세</h2>
+        <p>£8,621</p>
+       </div>
+      </div><!-- /#db-topbar -->
+    </div>
+
+  </div><!-- /#dailybread -->
+
+</div><!-- /.container -->
+
+<script>
+(function () {
+  var os_path = '{{site.openspendingjs}}';
+
+  var db_load_data = function load_data(db, data) {
+    $('#content-wrap').show();
+    $('#preloader').remove();
+
+    db.setDataFromAggregator(data, ['unknown']);
+    db.setIconLookup(function(name) {
+      var style = OpenSpending.Styles.Cofog[name];
+      if (style != undefined) {
+       return style['icon'];
+      }
+      return 'img/functions/unknown.svg';
+    });
+    db.draw();
+  }
+
+  var db_init = function db_init() {
+    $('#preloader .txt').html('데이터를 불러오는 중입니다.');
+
+    var db = new OpenSpending.DailyBread($('#dailybread'));
+    new OpenSpending.Aggregator({
+      apiUrl: 'http://openspending.org/api',
+      dataset: OpenSpending.data,
+      drilldowns: ['cat1', 'cat2'],
+      cuts: ['year:' + OpenSpending.year],
+      rootNodeLabel: '총액',
+      breakdown: 'region',
+      callback: function (data) { db_load_data(db, data); }
+    });
+  }
+
+  yepnope({
+    load: [
+      // 'http://wheredoesmymoneygo.org/wp-content/themes/wdmmg/wdmmg.css',
+      'http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.6/themes/ui-lightness/jquery-ui.css',
+      'http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js',
+      'http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js',
+      os_path + '/lib/vendor/base64.js',
+      os_path + '/lib/vendor/underscore.js',
+      os_path + '/lib/vendor/raphael-min.js',
+      os_path + '/app/dailybread/css/dailybread.css',
+      '/img/functions/cofog_dailybread.js',
+      '/js/dailybread/dailybread.js',
+      '/js/lib/aggregator.js',
+      '/js/lib/setting.js'
+    ],
+    complete: function () { jQuery(function ($) { db_init() } );}
+  });
+
+}());
+</script>
