@@ -2,7 +2,7 @@ OpenSpending = "OpenSpending" in window ? OpenSpending : {};
 
 (function ($) {
 
-TAXMAN_URL = 'http://localhost:3000';
+TAXMAN_URL = 'http://taxman.codenamu.org';
 
 var formatCurrency = function (val, prec, sym, dec, sep) {
 	prec = prec === undefined ? 2 : prec
