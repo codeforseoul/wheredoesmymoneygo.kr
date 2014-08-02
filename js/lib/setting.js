@@ -36,17 +36,17 @@ OpenSpending.Styles.Cofog = {
 		'053. ': { icon: '/img/functions/8_edu/sub/job_education.svg', color: '#C75746', bcolor: '#4E6D00' },
 	
 	// 문화 및 관광
-	'060. ': { icon: '/img/functions/12_culture/12.svg', color: '#C75746', bcolor: '#D33673' },
+	'060. ': { icon: '/img/functions/12_culture/12.svg', color: '#C75746', bcolor: '#ff6c00' },
 		// 문화예술
-		'061. ': { icon: '/img/functions/12_culture/sub/art.svg', color: '#C75746', bcolor: '#D33673' },
+		'061. ': { icon: '/img/functions/12_culture/sub/art.svg', color: '#C75746', bcolor: '#ff6c00' },
 		// 관광
-		'062. ': { icon: '/img/functions/12_culture/sub/tourism.svg', color: '#C75746', bcolor: '#D33673' },
+		'062. ': { icon: '/img/functions/12_culture/sub/tourism.svg', color: '#C75746', bcolor: '#ff6c00' },
 		// 체육
-		'063. ': { icon: '/img/functions/12_culture/sub/physical.svg', color: '#C75746', bcolor: '#D33673' },
+		'063. ': { icon: '/img/functions/12_culture/sub/physical.svg', color: '#C75746', bcolor: '#ff6c00' },
 		// 문화재
-		'064. ': { icon: '/img/functions/12_culture/sub/cultural_assets.svg', color: '#C75746', bcolor: '#D33673' },
+		'064. ': { icon: '/img/functions/12_culture/sub/cultural_assets.svg', color: '#C75746', bcolor: '#ff6c00' },
 		// 문화 및 관광 일반
-		'065. ': { icon: '/img/functions/12_culture/sub/culture.svg', color: '#C75746', bcolor: '#D33673' },
+		'065. ': { icon: '/img/functions/12_culture/sub/culture.svg', color: '#C75746', bcolor: '#ff6c00' },
 		
 	// 환경보호
 	'070. ': { icon: '/img/functions/6_env/6.svg', color: '#C75746', bcolor: '#2A3A03' },
@@ -94,52 +94,52 @@ OpenSpending.Styles.Cofog = {
 		// 농업 및 농촌
 		'101. ': { icon: '/img/functions/11_agri/sub/agriculture.svg', color: '#C75746', bcolor: '#C75746'},
 		// 임업 및 산촌
-		//'102. ': { icon: '/img/functions/11_agri/sub/agriculture.svg', color: '#C75746', bcolor: '#C75746'},
+		'102. ': { icon: '/img/functions/11_agri/sub/agri_and_fish.svg', color: '#C75746', bcolor: '#C75746'},
 		// 해양수산 및 어촌
 		'103. ': { icon: '/img/functions/11_agri/sub/fishing_industry.svg', color: '#C75746', bcolor: '#C75746'},
 	
 	// 산업 및 중소기업
-	'110. ': { icon: '/img/functions/2_industry/2.svg', color: '#C75746', bcolor: '#D33673'},
+	'110. ': { icon: '/img/functions/2_industry/2.svg', color: '#C75746', bcolor: '#0094b9'},
 		// 산업 기술 지원
-		'112. ': { icon: '/img/functions/2_industry/sub/industry_tec_support.svg', color: '#C75746', bcolor: '#D33673'},
+		'112. ': { icon: '/img/functions/2_industry/sub/industry_tec_support.svg', color: '#C75746', bcolor: '#0094b9'},
 		// 무역 및 투자유치
-		'113. ': { icon: '/img/functions/2_industry/sub/trade.svg', color: '#C75746', bcolor: '#D33673'},
+		'113. ': { icon: '/img/functions/2_industry/sub/trade.svg', color: '#C75746', bcolor: '#0094b9'},
 		// 산업진흥 및 고도화
-		'114. ': { icon: '/img/functions/2_industry/sub/industry_high.svg', color: '#C75746', bcolor: '#D33673'},
+		'114. ': { icon: '/img/functions/2_industry/sub/industry_high.svg', color: '#C75746', bcolor: '#0094b9'},
 		// 에너지 및 자원개발
-		'115. ': { icon: '/img/functions/2_industry/sub/energy.svg', color: '#C75746', bcolor: '#D33673'},
+		'115. ': { icon: '/img/functions/2_industry/sub/energy.svg', color: '#C75746', bcolor: '#0094b9'},
 		// 산업 및 중소기업 일반		
-		'116. ': { icon: '/img/functions/2_industry/sub/industry.svg', color: '#C75746', bcolor: '#D33673'},
+		'116. ': { icon: '/img/functions/2_industry/sub/industry.svg', color: '#C75746', bcolor: '#0094b9'},
 
 	// 수송 및 교통
-	'120. ': { icon: '/img/functions/3_trans/3.svg', color: '#C75746', bcolor: '#D33673'},
+	'120. ': { icon: '/img/functions/3_trans/3.svg', color: '#C75746', bcolor: '#0072ff'},
 		// 도로
-		'121. ': { icon: '/img/functions/3_trans/sub/way.svg', color: '#C75746', bcolor: '#D33673'},
+		'121. ': { icon: '/img/functions/3_trans/sub/way.svg', color: '#C75746', bcolor: '#0072ff'},
 		// 도시 철도
-		'123. ': { icon: '/img/functions/3_trans/sub/railway.svg', color: '#C75746', bcolor: '#D33673'},
+		'123. ': { icon: '/img/functions/3_trans/sub/railway.svg', color: '#C75746', bcolor: '#0072ff'},
 		// 해운 및 항만
-		'124. ': { icon: '/img/functions/3_trans/sub/ship.svg', color: '#C75746', bcolor: '#D33673'},
+		'124. ': { icon: '/img/functions/3_trans/sub/ship.svg', color: '#C75746', bcolor: '#0072ff'},
 		// 항공 및 공항
-		'125. ': { icon: '/img/functions/3_trans/sub/airplain.svg', color: '#C75746', bcolor: '#D33673'},
+		'125. ': { icon: '/img/functions/3_trans/sub/airplain.svg', color: '#C75746', bcolor: '#0072ff'},
 		// 대중교통 및 물류 등 기타
-		'126. ': { icon: '/img/functions/3_trans/sub/public_transport.svg', color: '#C75746', bcolor: '#D33673'},
+		'126. ': { icon: '/img/functions/3_trans/sub/public_transport.svg', color: '#C75746', bcolor: '#0072ff'},
 
 	// 국토 및 지역개발
-	'140. ': { icon: '/img/functions/9_territory/9.svg', color: '#C75746', bcolor: '#790586'},
+	'140. ': { icon: '/img/functions/9_territory/9.svg', color: '#C75746', bcolor: '#ffc000'},
 		// 수자원
-		'141. ': { icon: '/img/functions/9_territory/sub/water_resources.svg', color: '#C75746', bcolor: '#790586'},
+		'141. ': { icon: '/img/functions/9_territory/sub/water_resources.svg', color: '#C75746', bcolor: '#ffc000'},
 		// 지역 및 도시
-		'142. ': { icon: '/img/functions/9_territory/sub/region_and_city.svg', color: '#C75746', bcolor: '#790586'},
+		'142. ': { icon: '/img/functions/9_territory/sub/region_and_city.svg', color: '#C75746', bcolor: '#ffc000'},
 		// 산업단지
-		'143. ': { icon: '/img/functions/9_territory/sub/industrial_complex.svg', color: '#C75746', bcolor: '#790586'},
+		'143. ': { icon: '/img/functions/9_territory/sub/industrial_complex.svg', color: '#C75746', bcolor: '#ffc000'},
 
 	// 예비비
 	'160. ': { icon: '/img/functions/4_reserve_fund/4.svg', color: '#C75746', bcolor: '#790586' },
 		'161. ': { icon: '/img/functions/4_reserve_fund/sub/reserve_fund.svg', color: '#C75746', bcolor: '#790586' },
 
 	// 기타
-	'900. ': { icon: '/img/functions/10_others/10.svg', color: '#C75746', bcolor: '#790586' },
-		'901. ': { icon: '/img/functions/10_others/sub/etc.svg', color: '#C75746', bcolor: '#790586' }
+	'900. ': { icon: '/img/functions/10_others/10.svg', color: '#C75746', bcolor: '#4d4d4d' },
+		'901. ': { icon: '/img/functions/10_others/sub/etc.svg', color: '#C75746', bcolor: '#4d4d4d' }
 
 
 };
