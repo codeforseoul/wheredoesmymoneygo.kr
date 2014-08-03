@@ -47,8 +47,7 @@ OpenSpending.BubbleMap = function (config) {
 				},
 				bubbleStyles: {
 					'cat1': OpenSpending.Styles.Cofog,
-					cofog1:  OpenSpending.Styles.Cofog,
-					cofog2: OpenSpending.Styles.Cofog
+					'cat2': OpenSpending.Styles.Cofog,
 				},
 				map: {
 						url: null,
@@ -215,7 +214,6 @@ OpenSpending.BubbleMap = function (config) {
 						});
 
 						self.layer = self.map.getLayer(opts.map.layerName);
-
 						self.layer.on('click', function(d) {
 								var a = d[opts.map.keyAttribute];
 								selectedRegion = selectedRegion==a ? null : a;
