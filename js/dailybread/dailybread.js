@@ -43,8 +43,8 @@ OpenSpending.DailyBread = function (elem, opts) {
 		this.$e.find('.wdmmg-slider').slider({
 			value: this.salaryVal,
 			min: self.opts.minimumsalary || 10000000,
-			max: self.opts.maximumsalary || 500000000,
-			step: self.opts.salarystep || 10,
+			max: self.opts.maximumsalary || 100000000,
+			step: self.opts.salarystep || 10000,
 			animate: true,
 			slide: function () { self.sliderSlide.apply(self, arguments) },
 			change: function () { self.sliderChange.apply(self, arguments) }
@@ -204,17 +204,17 @@ OpenSpending.DailyBread = function (elem, opts) {
 		// Update values
 		var valEls = t.find('.db-area-value')
 		_.each(data, function (area, idx) {
-	valEls.eq(idx).text(formatCurrency(tax * area[2], 2, self.opts.symbol))
+			valEls.eq(idx).text(formatCurrency(tax * area[2], 0, self.opts.symbol))
 		})
 
 		t.show()
 	}
 
 	this.taxAndDataForTier = function (tierId) {
-		var data = self.data
-		var tax = self.taxVal
-		var areaId
-
+		
+		var data = self.data;
+		var tax = self.taxVal;
+		var areaId;
 		for (var i = 0, tot = tierId; i < tierId; i += 1) {
 			areaId = self.areas[i]
 			if (data[areaId]) {
@@ -224,6 +224,7 @@ OpenSpending.DailyBread = function (elem, opts) {
 				return null
 			}
 		}
+		//console.log(data);
 		return [tax, data]
 	}
 
@@ -234,7 +235,7 @@ OpenSpending.DailyBread = function (elem, opts) {
 			var iconUrl, paper;
 			iconUrl = $(e).data('svg-url');
 			paper = Raphael(e, iconRad+iconRad,iconRad+iconRad+5);
-			paper.circle(iconRad,iconRad,iconRad).attr({ fill: '#830242', stroke: 'none' });
+			paper.circle(iconRad,iconRad,iconRad).attr({ fill: '#00c6b4', stroke: 'none' });
 			paper.circle(iconRad,iconRad,iconRad-2).attr({ fill: 'none', stroke: '#eee', opacity: .8, 'stroke-dasharray': '- ' });
 			$.get(iconUrl, function(svg) {
 				if (typeof(svg) == "string") {
