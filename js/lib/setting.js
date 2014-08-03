@@ -1,7 +1,7 @@
 var OpenSpending = OpenSpending || {};
 
-OpenSpending.data = 'tax_korea_updated';
-OpenSpending.year = 2012;
+OpenSpending.data = 'expenditure_southkorea';
+OpenSpending.year = 2013;
 OpenSpending.loderText = '데이터를 불러오는 중입니다.';
 
 var OpenSpending = OpenSpending || {};
