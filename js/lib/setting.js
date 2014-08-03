@@ -1,6 +1,6 @@
 var OpenSpending = OpenSpending || {};
 
-OpenSpending.data = 'expenditure_southkorea';
+OpenSpending.data = 'expenditure_of_southkorea';
 OpenSpending.year = 2013;
 OpenSpending.loderText = '데이터를 불러오는 중입니다.';
 
