@@ -100,6 +100,8 @@ OpenSpending.Styles.Cofog = {
 	
 	// 산업 및 중소기업
 	'110. ': { icon: '/img/functions/2_industry/2.svg', color: '#C75746', bcolor: '#0094b9'},
+		// 산업 금융 지원
+		'111. ': { icon: '/img/functions/2_industry/sub/industry_support.svg', color: '#C75746', bcolor: '#0094b9'},
 		// 산업 기술 지원
 		'112. ': { icon: '/img/functions/2_industry/sub/industry_tec_support.svg', color: '#C75746', bcolor: '#0094b9'},
 		// 무역 및 투자유치
@@ -133,6 +135,15 @@ OpenSpending.Styles.Cofog = {
 		// 산업단지
 		'143. ': { icon: '/img/functions/9_territory/sub/industrial_complex.svg', color: '#C75746', bcolor: '#ffc000'},
 
+	// 과학기술
+	'150. ': { icon: '/img/functions/7_sci/7.svg', color: '#C75746', bcolor: '#ffc000'},
+		// 
+		// '151. ': { icon: '/img/functions/7_sci/sub/', color: '#C75746', bcolor: '#ffc000'},
+		// 과학기술및연구지원
+		'152. ': { icon: '/img/functions/7_sci/sub/support_science.svg', color: '#C75746', bcolor: '#ffc000'},
+		// 과학기술일반
+		'153. ': { icon: '/img/functions/7_sci/sub/science.svg', color: '#C75746', bcolor: '#ffc000'},
+		
 	// 예비비
 	'160. ': { icon: '/img/functions/4_reserve_fund/4.svg', color: '#C75746', bcolor: '#790586' },
 		'161. ': { icon: '/img/functions/4_reserve_fund/sub/reserve_fund.svg', color: '#C75746', bcolor: '#790586' },
