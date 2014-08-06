@@ -1,7 +1,7 @@
 <?xml version="1.0" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 
-<svg style="stroke-width:0.7pt; stroke-linejoin: round; stroke:#000; fill:#f3f3f0;" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica, Arial, FreeSans, Sans, sans, sans-serif" height="601px" viewBox="0 0 636 601" width="636px" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 636 601">
+<svg style="stroke-width:0.7pt; stroke-linejoin: round; stroke:#000; fill:#f3f3f0;" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica, Arial, FreeSans, Sans, sans, sans-serif" height="701px" viewBox="0 0 636 701" width="636px" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 636 701">
 
 <defs>
 
@@ -14,7 +14,7 @@
 
 <views>
 
-<view padding="0" h="601" w="636.745472018">
+<view padding="0" h="701" w="636.745472018">
 
 <proj lon0="-4.3" id="laea" lat0="54.275" />
 
