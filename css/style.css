@@ -1,3 +1,12 @@
+@font-face {
+  font-family: 'seoul_namsan';
+  src: url('/font/SeoulNamsanM.ttf') format('truetype'),
+      url('/font/SeoulNamsanM.otf') format('opentype'),
+      url('/font/SeoulNamsanM.eot'),
+      url('/font/SeoulNamsanM.woff') format('woff');
+}
+
+
 html {
   background-color: #222222;
 }
@@ -6,8 +15,12 @@ body {
   min-height: 80%;
 }
 
+.row {
+  margin-left: 0px;
+}
+
 body, p, blockquote p {
-  font-family: Palatino, georgia, 'times new roman', serif;
+  font-family: 'seoul_namsan', Palatino, georgia, 'times new roman', serif;
   font-size: 16px;
   line-height: 25px;
 }
@@ -34,7 +47,7 @@ a {
 #logo #claim {
   margin-top: -10px;
   /*font-style: italic;*/
-  letter-spacing: -1.9px;
+  /*letter-spacing: -1.0px;*/
   color: #999999;
   font-size: 1.1em;
 }
@@ -48,17 +61,30 @@ a {
 }
 
 .main_col {
-  width: 470px;
+  width: 468px;
   display: inline-block;
   vertical-align: top;
 }
 
+.main_col h2 {
+  color: #00c6b4;
+  text-align: center;
+}
+
+.main_col p {
+  padding: 0 41px;
+}
+
 .mainpage_dailybread {
-  background: url("/img/mainpage_dailybread.png") no-repeat;
+  width: 470px;
+  height: 250px;
+  background: url("/img/mainpage_dailybread.png") center center no-repeat;
 }
 
 .mainpage_bubbletree {
-  background: url("/img/mainpage_bubbletree.png") no-repeat;
+  width: 470px;
+  height: 250px;
+  background: url("/img/mainpage_bubbletree.png") center center no-repeat;
 }
 
 
@@ -69,7 +95,7 @@ a {
 nav ul li, 
 footer,
 footer p {
-  font-family: "OpenSansLight", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'seoul_namsan', "OpenSansLight", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 13px;
   line-height: 18px;
 }
@@ -81,7 +107,7 @@ nav ul.nav.nav-tabs li {
 nav ul.nav.nav-tabs li a.active {
   color: #000;
   font-weight: bold;
-  font-family: OpenSansSemibold, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'seoul_namsan', OpenSansSemibold, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 footer {
@@ -124,7 +150,7 @@ footer a, footer a:hover {
 }
 
 #dailybread .db-area-title h3 {
-  font-family: "OpenSansSemibold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'seoul_namsan', "OpenSansSemibold", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 11px;
   line-height: 13px;
 }
@@ -188,13 +214,13 @@ footer a, footer a:hover {
 }
 
 #bubbletree .desc {
-  font-family: "OpenSansLight", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'seoul_namsan', "OpenSansLight", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 11px;
   line-height: 13px;
 }
 
 #bubbletree .amount {
-  font-family: Palatino, georgia, 'times new roman', serif;
+  font-family:'seoul_namsan', Palatino, georgia, 'times new roman', serif;
   font-size: 14px;
 }
 
