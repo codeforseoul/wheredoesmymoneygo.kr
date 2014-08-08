@@ -34,7 +34,7 @@ a {
 #logo #claim {
   margin-top: -10px;
   /*font-style: italic;*/
-  /*letter-spacing: 1px;*/
+  letter-spacing: -1.9px;
   color: #999999;
   font-size: 1.1em;
 }
@@ -47,6 +47,19 @@ a {
   text-align: center;
 }
 
+.main_col {
+  width: 470px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.mainpage_dailybread {
+  background: url("/img/mainpage_dailybread.png") no-repeat;
+}
+
+.mainpage_bubbletree {
+  background: url("/img/mainpage_bubbletree.png") no-repeat;
+}
 
 
 /* 
