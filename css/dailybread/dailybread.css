@@ -1,3 +1,17 @@
+#db-slider {
+	width: 67%;
+}
+
+#db-tax {
+	width: 17% !important;
+	margin: 0 0 0 0;
+}
+
+#db-tax span{
+	font-size: 10px;
+	color: red;
+}
+
 /** Layout */
 
 .layout-row, .db-area-row {

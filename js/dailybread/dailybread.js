@@ -136,7 +136,8 @@ OpenSpending.DailyBread = function (elem, opts) {
 		}, self.opts.taxman));
 
 		rq.then(function (data) {
-			self.taxVal = data.calculation.total;
+			// 종합소득세/10 = 지방소비세
+			self.taxVal = parseInt(data.calculation.total/10);
 		})
 
 		return rq;
