@@ -3,19 +3,19 @@ layout: default
 title: FAQ
 ---
 
-<h2 class="page-header">데이터의 출처는 무엇인가요?</h2>
+<h2 class="page-header">데이터의 출처는 어디인가요?</h2>
 
 <div class="row">
   <div class="span8 offset4">
-    <p><strong>Where Does My Money Go?</strong>에서 사용된 세금 데이터는 대한민국 시/도에서 공개한 2013년 세출 예산서를 기반으로 합니다(예산 결산서를 사용하고 싶었으나 2014년 8월 현재 2012년 자료밖에 찾을 수 없어서 예산서를 사용하였습니다). 서울특별시는 서울 데이터 포털에서, 나머지 지자체는 각 홈페이지에서 공개한 데이터를 csv 형태로 가공하여 <a href="http://www.civicdata.com/dataset/expenditure-tax-korea/resource/7d394e42-103c-430a-802e-b7a1c604a998" target="_blank">Civicdata</a> 플랫폼에 업로드 한 뒤 <a href="https://openspending.org/expenditure_of_southkorea" target="_blank">오픈스펜딩</a>  만들어진 API를 기반으로 결과물을 보여줍니다.</p>
+    <p><strong>Where Does My Money Go?</strong>에서 사용된 재정 자료는 대한민국 광역자치단체(시/도)에서 공개한 2013년도 세출 예산서를 기반으로 합니다(예산 결산서를 사용하고 싶었으나 2014년 8월 현재 2012년 자료 밖에 찾을 수 없어서 예산서를 사용하였습니다). 서울특별시의 <a href="http://data.seoul.go.kr">열린데이터광장</a>과 각 광역자치단체의 홈페이지에서 공개된 재정 자료를 csv 형태로 변환하여 <a href="http://www.civicdata.com/dataset/expenditure-tax-korea/resource/7d394e42-103c-430a-802e-b7a1c604a998" target="_blank">Civicdata</a> 플랫폼에 업로드했습니다. 업로드된 데이터를 <a href="https://openspending.org/expenditure_of_southkorea" target="_blank">오픈스펜딩</a>API를 통해 .</p>
   </div>
 </div>
 
-<h2 class="page-header">세금이 사용되는 분야의 전부를 보여주는 건가요?</h2>
+<h2 class="page-header">세금이 쓰이는 모든 분야를 보여주는 건가요?</h2>
 
 <div class="row">
   <div class="span8 offset4">
-    <p>아닙니다. 아쉽게도 세출 내역 중에서 국세를 제외한 지자체에서 사용되는 지방소득세 정보만을 보여주고 있습니다. 따라서 지방소득세가 아닌 국방비 등의 정보는 누락되어 있습니다. 더욱이 세금으로 걷어지는 종합소득세의 10%만이 지방지자체로 분배가 되고 90%는 중앙정부에서 사용되고 있기 때문에 종합소득세의 10%만을 보여주고 있을 뿐입니다. 다음 버전에서는 종합소득세의 90%가 사용되는 중앙정부 세출 정보를 보여드리고자 합니다.</p>
+    <p>아닙니다. 아쉽게도 재정 지출 사항은 각 광역자치단체별 예산서에 따른 지출 사항만을 보여주고 있습니다. 따라서 국방비, 연금, 건강보험 등의 재정 지출정보는 반영되지 않았습니다. 더욱이 세금으로 걷어지는 종합소득세의 10%만이 지방지자체로 분배가 되고 90%는 중앙정부에서 사용되고 있기 때문에 종합소득세의 10%만을 보여주고 있을 뿐입니다. 다음 버전에서는 종합소득세의 90%가 사용되는 중앙정부 세출 정보를 보여드리고자 합니다.</p>
   </div>
 </div>
 
@@ -23,7 +23,7 @@ title: FAQ
 
 <div class="row">
   <div class="span8 offset4">
-    <p><a href="http://openspending.org" target="_blank">오픈스펜딩</a> 팀에서 만든 세금 계산 알고리즘 <a href="https://github.com/openspending/taxman" target="_blank">Taxman</a>에 한국의 <a href="http://www.nts.go.kr/tax/tax_01.asp?cinfo_key=MINF5520100726112800&#38;menu_a=100&#38;menu_b=100&#38;menu_c=400&#38;flag=01" target="_blank">2013년도 세금 계산법</a>을 적용하였습니다. <strong>다만 현재는 세율을 계산하는 것 외에 가족 부양 현황 등 다른 요소는 적용되지 않은 상태입니다.</strong> 따라서 자신이 내는 세금이 정확하지 않을 수 있습니다. 앞으로 더 정확한 세금을 계산할 수 있도록 노력하겠습니다.
+    <p><a href="http://openspending.org" target="_blank">오픈스펜딩</a> 팀에서 만든 세금 계산 알고리즘인 <a href="https://github.com/openspending/taxman" target="_blank">Taxman</a>에 한국의 <a href="http://www.nts.go.kr/tax/tax_01.asp?cinfo_key=MINF5520100726112800&#38;menu_a=100&#38;menu_b=100&#38;menu_c=400&#38;flag=01" target="_blank">2013년도 지방소득세율(종합소득세 분)</a>을 적용했습니다. <strong>다만 현재는 과표에 따른 단순 세율계산 이외로 부양 가족 수, 교육비 지출 등의 차가감 공제, 감면 항목은 적용되지 않은 상태입니다.</strong> 따라서 실제로 납부하는 세액과 차이가 있을 수 있습니다. 앞으로 더 정확하게 세액을 계산할 수 있도록 노력하겠습니다.
     </p>
   </div>
 </div>
