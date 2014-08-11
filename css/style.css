@@ -61,7 +61,7 @@ a {
 }
 
 .main_col {
-  width: 468px;
+  width: 467px;
   display: inline-block;
   vertical-align: top;
 }
@@ -72,7 +72,7 @@ a {
 }
 
 .main_col p {
-  padding: 0 41px;
+  padding: 0 39px;
 }
 
 .mainpage_dailybread {
@@ -88,11 +88,11 @@ a {
 }
 
 
-/* 
- * Nav and Footer styles based on OKFN brand design. 
+/*
+ * Nav and Footer styles based on OKFN brand design.
  */
 
-nav ul li, 
+nav ul li,
 footer,
 footer p {
   font-family: "OpenSansLight", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -131,8 +131,8 @@ footer a, footer a:hover {
   color: #AEEBDF;
 }
 
-/* 
- * Visualization-specific styles. 
+/*
+ * Visualization-specific styles.
  */
 
 #db-frame {
