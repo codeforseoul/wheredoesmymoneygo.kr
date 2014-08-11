@@ -21,14 +21,15 @@ OpenSpending.getBubbleMapDependencies = function(os_path) {
 				'/js/lib/aggregator.js',
 				'/js/bubble/bubbletree.js',
 				'/js/bubble/bubblemap.js',
-				'/js/lib/setting.js'
+				'/js/lib/setting.js',
+				'/js/lib/formatkr.js'
 				];
 };
 
 OpenSpending.BubbleMap = function (config) {
 		var self = this;
 
-		var formatAmount = BubbleTree.Utils.formatNumber = OpenSpending.Utils.formatAmount;
+		var formatAmount = BubbleTree.Utils.formatNumber = OpenSpendingKr.Utils.formatAmount;
 
 		selectedRegion = null;
 		currentNode = null;
