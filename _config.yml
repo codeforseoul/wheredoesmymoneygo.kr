@@ -1,4 +1,3 @@
-pygments: true
-
+highlighter: true
 title: 내가 낸 세금은 어디에 쓰일까?
 openspendingjs: 'http://openspending.org/static/openspendingjs'
