@@ -12,7 +12,7 @@
   <meta name="viewport" content="width=device-width">
   
   <link rel="stylesheet" href="http://assets.openspending.org/branding/fonts/opensans/stylesheet.css" />
-  <link rel="stylesheet" href="/css/bootstrap.css">
+  <link rel="stylesheet" href="http://assets.okfn.org/ext/bootstrap-2.2.2/css/bootstrap.css">
   <link rel="stylesheet" href="/css/style.css">
   <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon" />
   <script src="/js/lib/modernizr-2.5.3.min.js"></script>
@@ -23,10 +23,14 @@
   {{ content }}
 
   <script>
-    var _gaq=[['_setAccount','UA-8271754-8'],['_trackPageview']];
-    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-    s.parentNode.insertBefore(g,s)}(document,'script'));
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-58003381-1', 'auto');
+    ga('send', 'pageview');
+
   </script>
 </body>
 </html>
