@@ -58,7 +58,7 @@ title: 일일 지출 내역
     var db = new OpenSpending.DailyBread($('#dailybread'));
     new OpenSpending.Aggregator({
       apiUrl: 'http://openspending.org/api',
-      dataset: OpenSpending.data,
+      dataset: OpenSpending.localData.data,
       drilldowns: ['cat1', 'cat2'],
       cuts: ['year:' + OpenSpending.year],
       rootNodeLabel: '총액',
