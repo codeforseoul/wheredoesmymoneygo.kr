@@ -141,15 +141,16 @@ footer a, footer a:hover {
   border: none;
 }
 
-#dailybread {
+#dailybread-central, #dailybread-local {
   min-height: 20em;
 }
 
-#dailbread #db-topbar div h2 {
+#dailybread-central #db-topbar-central div h2, #dailybread-local #db-topbar-local div h2,  {
   text-transform: none;
+  font-size: 20px;
 }
 
-#dailybread .db-area-title h3 {
+#dailybread-central .db-area-title h3, #dailybread-local .db-area-title h3 {
   font-family: 'seoul_namsan', "OpenSansSemibold", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 11px;
   line-height: 13px;

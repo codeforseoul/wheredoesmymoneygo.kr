@@ -4,46 +4,100 @@ title: 일일 지출 내역
 ---
 
 <div class="container">
-
-  <div id="dailybread">
-    <h2 class="page-header">일일 지출 내역 <small> 하루동안 대한민국 납세자가 지불하는 비용</small></h2>
-
-    <div id="preloader" style="text-align: center; padding: 100px"><img src="/img/ajax-loader.gif" style="vertical-align:top" /> &nbsp;<span class="txt">자바스크립트 라이브러리를 불러오는 중입니다.</span></div>
-
-    <div id="content-wrap" style="display:none">
-      <div id="db-topbar" class="layout-row layout-3col-15-70-15">
-       <div id="db-salary" class="layout-col layout-col-1">
-        <h2>연봉</h2>
-        <p>₩30,000,000</p>
-       </div>
-
-       <div id="db-slider" class="layout-col layout-col-2">
-        <h2>연 소득을 선택하세요 (세전 기준)</h2>
-        <div class="wdmmg-slider"></div>
-       </div>
-
-       <div id="db-tax" class="layout-col layout-col-3">
-        <h2>지방소득세<span>(종합소득세액/10)</span></h2>
-        <p>₩800,000</p>
-       </div>
-      </div><!-- /#db-topbar -->
+  <div role="tabpanel">
+    <div id="myTab" class="row" role="tablist">
+      <div class="centralTab col-md-6" role="presentation">
+        <a href="#central" aria-controls="central" role="tab" data-toggle="tab">
+          <img id="btn-central" src="/img/btn-central-active.png" alt="">
+        </a>
+      </div>
+      <div class="localTab col-md-6" role="presentation">
+        <a href="#local" aria-controls="local" role="tab" data-toggle="tab">
+          <img id="btn-local" src="/img/btn-local.png"></img>
+        </a>
+      </div>
     </div>
+    <div id="myTabContent" class="tab-content">
+      <div id="central" class="tab-pane active" aria-labelledby="central-tab" role="tabpanel">
+        <div id="dailybread-central">
+          <h2 class="page-header">일일 지출 내역 <small> 하루동안 대한민국 납세자가 지불하는 비용</small></h2>
 
-  </div><!-- /#dailybread -->
+          <div id="preloader-central" style="text-align: center; padding: 100px"><img src="/img/ajax-loader.gif" style="vertical-align:top" /> &nbsp;<span class="txt">자바스크립트 라이브러리를 불러오는 중입니다.</span></div>
+
+          <div id="content-wrap-central" style="display:none">
+            <div id="db-topbar-central" class="layout-row layout-3col-15-70-15">
+             <div id="db-salary-central" class="layout-col layout-col-1">
+              <h2>연봉</h2>
+              <p>₩30,000,000</p>
+             </div>
+
+             <div id="db-slider-central" class="layout-col layout-col-2">
+              <h2>연 소득을 선택하세요 (세전 기준)</h2>
+              <div class="wdmmg-slider"></div>
+             </div>
+
+             <div id="db-tax-central" class="layout-col layout-col-3">
+              <h2>종합소득세</h2>
+              <p>₩800,000</p>
+             </div>
+            </div><!-- /#db-topbar -->
+          </div>
+
+        </div><!-- /#dailybread -->
+      </div> 
+      <div id="local" class="tab-pane" aria-labelledby="local-tab" role="tabpanel">
+        <div id="dailybread-local">
+          <h2 class="page-header">일일 지출 내역 <small> 하루동안 대한민국 납세자가 지불하는 비용</small></h2>
+
+          <div id="preloader-local" style="text-align: center; padding: 100px"><img src="/img/ajax-loader.gif" style="vertical-align:top" /> &nbsp;<span class="txt">자바스크립트 라이브러리를 불러오는 중입니다.</span></div>
+
+          <div id="content-wrap-local" style="display:none">
+            <div id="db-topbar-local" class="layout-row layout-3col-15-70-15">
+             <div id="db-salary-local" class="layout-col layout-col-1">
+              <h2>연봉</h2>
+              <p>₩30,000,000</p>
+             </div>
+
+             <div id="db-slider-local" class="layout-col layout-col-2">
+              <h2>연 소득을 선택하세요 (세전 기준)</h2>
+              <div class="wdmmg-slider"></div>
+             </div>
+
+             <div id="db-tax-local" class="layout-col layout-col-3">
+              <h2>지방소득세<span>(종합소득세액/10)</span></h2>
+              <p>₩800,000</p>
+             </div>
+            </div><!-- /#db-topbar -->
+          </div>
+
+        </div><!-- /#dailybread -->
+      </div>
+    </div>
+  </div>
+
+
 
 </div><!-- /.container -->
 
+<script src="/js/lib/jquery-ui.min.js"></script>
+<script src="/img/functions/cofog_dailybread.js"></script>
+<script src="/js/lib/aggregator.js"></script>
+<script src="/js/dailybread/dailybread.js"></script>
+<script src="/js/lib/bootstrap_tab.js"></script>
+<script src="/js/lib/setting.js"></script>
+
 <script>
-(function () {
+
+var initSpendingData = function (region) {
   var os_path = '{{site.openspendingjs}}';
 
-  var db_load_data = function load_data(db, data) {
-    $('#content-wrap').show();
-    $('#preloader').remove();
+  var db_load_data = function (db, data) {
+    $('#content-wrap-' + region.title).show();
+    $('#preloader-' + region.title).remove();
 
     db.setDataFromAggregator(data, ['unknown']);
     db.setIconLookup(function(name) {
-      var style = OpenSpending.Styles.Cofog[name];
+      var style = OpenSpending.Styles.Cofog[name.slice(0, 3)];
       if (style != undefined) {
        return style['icon'];
       }
@@ -52,13 +106,13 @@ title: 일일 지출 내역
     db.draw();
   }
 
-  var db_init = function db_init() {
-    $('#preloader .txt').html('데이터를 불러오는 중입니다.');
+  var db_init = function () {
 
-    var db = new OpenSpending.DailyBread($('#dailybread'));
+    $('#preloader-' + region.title + ' .txt').html('데이터를 불러오는 중입니다.');
+    var db = new OpenSpending.DailyBread($('#dailybread-' + region.title), {'region': region.title});
     new OpenSpending.Aggregator({
       apiUrl: 'http://openspending.org/api',
-      dataset: OpenSpending.localData.data,
+      dataset: region.data,
       drilldowns: ['cat1', 'cat2'],
       cuts: ['year:' + OpenSpending.year],
       rootNodeLabel: '총액',
@@ -69,21 +123,34 @@ title: 일일 지출 내역
 
   yepnope({
     load: [
-      // 'http://wheredoesmymoneygo.org/wp-content/themes/wdmmg/wdmmg.css',
-      '/css/jquery-ui.css',
-      '/js/lib/jquery.min.js',
-      '/js/lib/jquery-ui.min.js',
       '/js/lib/base64.js',
-      '/js/lib/underscore.js',
       '/js/lib/raphael-min.js',
-      '/css/dailybread/dailybread.css',
-      '/img/functions/cofog_dailybread.js',
-      '/js/dailybread/dailybread.js',
-      '/js/lib/aggregator.js',
-      '/js/lib/setting.js'
+      '/js/lib/underscore.js'
     ],
     complete: function () { jQuery(function ($) { db_init() } );}
   });
+};
 
-}());
+
+$(document).ready(function () {
+  initSpendingData(OpenSpending.centralData);
+  initSpendingData(OpenSpending.localData);
+
+  $('#myTab a').click(function (e) {
+    e.preventDefault();
+    $(this).tab('show');
+    console.log($(this));
+  });
+});
+
+$('.centralTab').click(function () {
+  $('#btn-central').attr('src', '/img/btn-central-active.png');
+  $('#btn-local').attr('src', '/img/btn-local.png');
+});
+
+$('.localTab').click(function () {
+  $('#btn-central').attr('src', '/img/btn-central.png');
+  $('#btn-local').attr('src', '/img/btn-local-active.png');
+});
+
 </script>

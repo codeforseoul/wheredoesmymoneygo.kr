@@ -1,17 +1,17 @@
-#db-slider {
-	width: 65%;
+#myTab {
+  width: 300px;
+  margin: 30px auto 0px;
+
 }
 
-#db-tax {
-	width: 19% !important;
-	margin: 0 0 0 0;
+#myTab .centralTab, #myTab .localTab {
+  text-align: center;
 }
 
-#db-tax span{
-	font-size: 10px;
-	color: red;
+#myTab .centralTab .centralTabImg {
+  width: 120px;
+  height: 120px;
 }
-
 /** Layout */
 
 .layout-row, .db-area-row {
@@ -35,135 +35,148 @@
 }
 
 .layout-3col-15-70-15 .layout-col-2 {
-  width: 69%;
+  width: 64%;
+}
+
+.layout-3col-15-70-15 .layout-col-3 {
+  width: 19%;
 }
 
 /** Header */
 
 #db-header {
-	text-align: center;
+  text-align: center;
 }
 
 #db-header h1 {
-	color: #00c6b4;
-	font-size: 2.5em;
-	text-transform: uppercase;
+  color: #00c6b4;
+  font-size: 2.5em;
+  text-transform: uppercase;
 }
 
 #db-header h2 {
-	margin: 0;
-	color: #aaa;
-	font-size: 1.5em;
-	text-transform: uppercase;
+  margin: 0;
+  color: #aaa;
+  font-size: 1.5em;
+  text-transform: uppercase;
 }
 
 /** Top bar */
 
 #db-topbar {
-	margin: 1em 0 2.5em;
-	height: 3em;
-	overflow: visible;
+  margin: 1em 0 2.5em;
+  height: 3em;
+  overflow: visible;
 }
 
 #db-topbar div h2 {
-	margin: 0;
-	padding: 0;
-	font-size: 1.2em;
-	text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+  font-size: 1.2em;
+  text-transform: uppercase;
 }
 
 #db-topbar div p {
-	margin: 0;
-	padding: 0;
-	color: #00c6b4;
-	font-size: 1.5em;
-	font-weight: bold;
+  margin: 0;
+  padding: 0;
+  color: #00c6b4;
+  font-size: 1.5em;
+  font-weight: bold;
 }
 
 #db-salary {
-	text-align: left;
+  text-align: left;
 }
 
 #db-slider {
-	text-align: center;
+  width: 65%;
+  text-align: center;
 }
 
-#db-tax {
-	text-align: right;
+#db-tax-central, #db-tax-local {
+  /*width: 14% !important;*/
+  margin: 0 0 0 0;
+  text-align: right;
 }
+
+#db-tax-local span{
+  font-size: 10px;
+  color: red;
+}
+
 
 /** Slider */
 
 .wdmmg-slider {
-	width: 70%;
-	margin: 0.25em auto;
+  width: 90%;
+  margin: 0.25em auto;
 }
 
 .wdmmg-slider.ui-widget-content {
-	background: none;
-	background-color: #00c6b4;
-	height: 6px;
+  background: none;
+  background-color: #00c6b4;
+  height: 6px;
 }
 
 .wdmmg-slider.ui-slider-horizontal .ui-slider-handle {
-	background: url('/img/won-slider.png') transparent no-repeat;
-	height: 17px;
-	width: 17px;
-	border: none;
-	cursor: move;
-	margin-left: -0.4em;
+  background: url('/img/won-slider.png') transparent no-repeat;
+  height: 17px;
+  width: 17px;
+  border: none;
+  cursor: move;
+  margin-left: -0.4em;
 }
 
 .wdmmg-slider div#ticks {
-	font-size: 90%;
-	margin-top: 5px;
+  font-size: 90%;
+  margin-top: 5px;
 }
 
 .wdmmg-slider div.tick-min {
-	float: left;
-	margin-left: -5px;
+  float: left;
+  margin-left: -5px;
 }
 
 .wdmmg-slider div.tick-max {
-	float: right;
-	margin-right: -15px;
+  float: right;
+  margin-right: -15px;
 }
 
 /** Tiers */
 
 .db-tier {
-	width: 100%;
-	margin: 1em 0 0 0;
-	clear: both;
+  width: 100%;
+  margin: 1em 0 0 0;
+  clear: both;
 }
 
 .db-area-row {
-	overflow: hidden;
-	margin: 0;
+  overflow: hidden;
+  margin: 0;
 }
 
 .db-area-col {
-	cursor: pointer;
-	margin: 0;
-	text-align: center;
+  cursor: pointer;
+  margin: 0;
+  text-align: center;
 }
 
 .db-area-col.active {
-	color: #00c6b4;
-	font-weight: bold;
+  color: #00c6b4;
+  font-weight: bold;
 }
 
 .db-area-title h3 {
-	font-size: 0.9em;
-	line-height: 1.4em;
-	margin-bottom: 0.5em;
+  font-size: 0.9em;
+  line-height: 1.4em;
+  margin-bottom: 0.5em;
 }
 
 .db-area-col .db-area-icon {
-	height: 5em;
-	border-right: 1px solid #fff;
-	padding-top: 2px;
-/*	background: #ddd; */
+  height: 5em;
+  border-right: 1px solid #fff;
+  padding-top: 2px;
+/*  background: #ddd; */
 }
 
 .db-area-col .db-area-icon img {
@@ -180,9 +193,3 @@
   fill: #00c6b4;
   stroke: none;
 }
-
-/*
-.db-area-col.active .db-area-icon embed circle {
-}
-*/
-
