@@ -5,6 +5,7 @@ title: 일일 지출 내역
 
 <div class="container">
   <div role="tabpanel">
+    <p style="padding-top: 30px; text-align: center;">중앙 정부에서 사용한 소득세 내역과 지방 정부에서 사용한 지방소득세 내역을 선택하세요.</p>
     <div id="myTab" class="row" role="tablist">
       <div class="centralTab col-md-6" role="presentation">
         <a href="#central" aria-controls="central" role="tab" data-toggle="tab">
@@ -82,6 +83,7 @@ title: 일일 지출 내역
 <script src="/js/lib/jquery-ui.min.js"></script>
 <script src="/img/functions/cofog_dailybread.js"></script>
 <script src="/js/lib/aggregator.js"></script>
+<script src="/js/lib/underscore.js"></script>
 <script src="/js/dailybread/dailybread.js"></script>
 <script src="/js/lib/bootstrap_tab.js"></script>
 <script src="/js/lib/setting.js"></script>
@@ -124,8 +126,7 @@ var initSpendingData = function (region) {
   yepnope({
     load: [
       '/js/lib/base64.js',
-      '/js/lib/raphael-min.js',
-      '/js/lib/underscore.js'
+      '/js/lib/raphael-min.js'
     ],
     complete: function () { jQuery(function ($) { db_init() } );}
   });

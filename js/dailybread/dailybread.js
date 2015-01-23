@@ -1,6 +1,6 @@
 OpenSpending = "OpenSpending" in window ? OpenSpending : {};
 
-(function ($) {
+(function ($, _) {
 
 TAXMAN_URL = 'http://taxman.codenamu.org';
 
@@ -102,17 +102,17 @@ OpenSpending.DailyBread = function (elem, opts) {
     handleChildren = function(node, absolute) {
       return _.map(
         _.filter(node.children, function(child) {
-          // console.log("data: ");
-          // console.log(data);
-          // console.log("child: " );
-          // console.log(child);
-          // console.log("skip: " );
-          // console.log(skip);
           return _.indexOf(skip, child.name);
         }),
         function(child) {
           var daily = (child.amount / node.amount);
           if (absolute) daily = daily / 365.0;
+
+          // Labeling(Remove the Id of child)
+          if (child.label.slice(0, 1) == 0 || child.label.slice(0, 1) == 1) {
+            child.label = child.label.slice(5);
+          }
+
           return [child.name, child.label, daily, handleChildren(child, false)];
         });
     }
@@ -136,7 +136,11 @@ OpenSpending.DailyBread = function (elem, opts) {
 
     rq.then(function (data) {
       // 종합소득세/10 = 지방소비세
-      self.taxVal = parseInt(data.calculation.total/10);
+      if (String(self.opts.region) == String('local')) {
+        self.taxVal = parseInt(data.calculation.total/10);
+      } else {
+        self.taxVal = parseInt(data.calculation.total);
+      }
     })
 
     return rq;
@@ -223,7 +227,12 @@ OpenSpending.DailyBread = function (elem, opts) {
         return null
       }
     }
-    console.log(data);
+    
+    // sort by the amount
+    data = data.sort(function (a, b) {
+      return b[2] - a[2];
+    });
+    
     return [tax, data]
   }
 
@@ -257,4 +266,4 @@ OpenSpending.DailyBread = function (elem, opts) {
   return this
 }
 
-})(jQuery)
+})(jQuery, _)
