@@ -26,14 +26,14 @@ var formatCurrency = function (val, prec, sym, dec, sep) {
 }
 
 OpenSpending.DailyBread = function (elem, opts) {
-  var self = this
+  var self = this;
 
   this.opts = opts || {};
   this.$e = $(elem);
-  this.$e.data('wdmmg.dailybread', this)
+  this.$e.data('wdmmg.dailybread', this);
 
-  this.tiers = []
-  this.areas = []
+  this.tiers = [];
+  this.areas = [];
   this.iconLookup = function (name) { return undefined; };
 
   this.init = function () {
@@ -47,9 +47,9 @@ OpenSpending.DailyBread = function (elem, opts) {
       animate: true,
       slide: function () { self.sliderSlide.apply(self, arguments) },
       change: function () { self.sliderChange.apply(self, arguments) }
-    })
+    });
 
-    this.$e.delegate('.db-area-col', 'click', self.handleClick)
+    this.$e.delegate('.db-area-col', 'click', self.handleClick);
   }
 
   this.sliderSlide = function (evt, sld) {
@@ -211,7 +211,6 @@ OpenSpending.DailyBread = function (elem, opts) {
   }
 
   this.taxAndDataForTier = function (tierId) {
-    
     var data = self.data;
     var tax = self.taxVal;
     var areaId;
@@ -224,7 +223,7 @@ OpenSpending.DailyBread = function (elem, opts) {
         return null
       }
     }
-    //console.log(data);
+    console.log(data);
     return [tax, data]
   }
 

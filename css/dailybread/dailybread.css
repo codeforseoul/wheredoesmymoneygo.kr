@@ -1,4 +1,17 @@
+#myTab {
+  width: 300px;
+  margin: 30px auto 0px;
 
+}
+
+#myTab .centralTab, #myTab .localTab {
+  text-align: center;
+}
+
+#myTab .centralTab .centralTabImg {
+  width: 120px;
+  height: 120px;
+}
 /** Layout */
 
 .layout-row, .db-area-row {
@@ -22,7 +35,11 @@
 }
 
 .layout-3col-15-70-15 .layout-col-2 {
-  width: 69%;
+  width: 64%;
+}
+
+.layout-3col-15-70-15 .layout-col-3 {
+  width: 19%;
 }
 
 /** Header */
@@ -76,13 +93,13 @@
   text-align: center;
 }
 
-#db-tax {
-  width: 19% !important;
+#db-tax-central, #db-tax-local {
+  /*width: 14% !important;*/
   margin: 0 0 0 0;
   text-align: right;
 }
 
-#db-tax span{
+#db-tax-local span{
   font-size: 10px;
   color: red;
 }
@@ -91,7 +108,7 @@
 /** Slider */
 
 .wdmmg-slider {
-  width: 70%;
+  width: 90%;
   margin: 0.25em auto;
 }
 
