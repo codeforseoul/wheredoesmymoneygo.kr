@@ -33,9 +33,9 @@ OpenSpending.Styles.Cofog = {
   // 공공질서 및 안전
   '020': { icon: '/img/functions/020/020.svg', color: '#C75746', bcolor: '#0AB971' },
     // 법원 및 헌재
-    '021': { icon: '/img/functions/020/023.svg', color: '#C75746', bcolor: '#0AB971' },
+    '021': { icon: '/img/functions/020/021.svg', color: '#C75746', bcolor: '#0AB971' },
     // 법무 및 검찰
-    '022': { icon: '/img/functions/020/023.svg', color: '#C75746', bcolor: '#0AB971' },
+    '022': { icon: '/img/functions/020/022.svg', color: '#C75746', bcolor: '#0AB971' },
     // 경찰
     '023': { icon: '/img/functions/020/023.svg', color: '#C75746', bcolor: '#0AB971' },
     // 해경

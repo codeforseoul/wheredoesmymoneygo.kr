@@ -37,6 +37,7 @@ a {
 .spaced {
   margin-top: 3em;
   margin-bottom: 0em;
+  text-align: center;
 }
 
 #logo {
