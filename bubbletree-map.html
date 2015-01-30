@@ -10,47 +10,47 @@ title: 지역별 지출 내역
 
 <script type="text/javascript">
 (function ($) {
-	yepnope([
-	 { load: OpenSpending.getBubbleMapDependencies('{{site.openspendingjs}}'),
-		 complete: function() {
-			 new OpenSpending.BubbleMap({
-					loaderText: '데이터를 불러오는 중입니다.',
-					query: {
-						dataset: OpenSpending.localData.data,
-						cuts: ['year:' + OpenSpending.year],
-						drilldowns: ['cat1', 'cat2'],
-						breakdown: 'region',
-						rootNodeLabel: '총액'
-					},
-					bubbleStyles: {
-						'cofog' :  OpenSpending.Styles.Cofog
-					},
-					map: {
-						url: '/img/korea.svg',
-						layerName: 'KR',
-						keyAttribute: 'region',
-						legendText: '세출 내역'
-					},
-					table: { show: false }
-				});
-		}
-	 }
-	]); // yepnope()
+  yepnope([
+   { load: OpenSpending.getBubbleMapDependencies('{{site.openspendingjs}}'),
+     complete: function() {
+       new OpenSpending.BubbleMap({
+          loaderText: '데이터를 불러오는 중입니다.',
+          query: {
+            dataset: OpenSpending.localData.data,
+            cuts: ['year:' + OpenSpending.year],
+            drilldowns: ['cat1', 'cat2'],
+            breakdown: 'region',
+            rootNodeLabel: '총액'
+          },
+          bubbleStyles: {
+            'cofog' :  OpenSpending.Styles.Cofog
+          },
+          map: {
+            url: '/img/korea.svg',
+            layerName: 'KR',
+            keyAttribute: 'region',
+            legendText: '세출 내역'
+          },
+          table: { show: false }
+        });
+    }
+   }
+  ]); // yepnope()
 })(jQuery)
 </script>
 <div id="wdmmg-bubblemap">
-	<div id="preloader" style="text-align: center; padding: 100px"><img src="/img/ajax-loader.gif" style="vertical-align:top" /> &nbsp;<span class="txt">자바스크립트 라이브러리를 불러오는 중입니다.</span></div>
+  <div id="preloader" style="text-align: center; padding: 100px"><img src="/img/ajax-loader.gif" style="vertical-align:top" /> &nbsp;<span class="txt">자바스크립트 라이브러리를 불러오는 중입니다.</span></div>
 
-	<div id="wdmmg-bt">
-		<div class="bubbletree-wrapper">
-				<div id="wdmmg-bubbletree" class="bubbletree"></div>
-		</div>
-	</div>
+  <div id="wdmmg-bt">
+    <div class="bubbletree-wrapper">
+        <div id="wdmmg-bubbletree" class="bubbletree"></div>
+    </div>
+  </div>
 
 
-	<div id="wdmmg-map-legend" class="under-curtain"></div>
+  <div id="wdmmg-map-legend" class="under-curtain"></div>
 
-	<div id="wdmmg-map" class="under-curtain"></div>
+  <div id="wdmmg-map" class="under-curtain"></div>
 
 
 </div><!-- /#wdmmg-bubblemap -->

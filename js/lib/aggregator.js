@@ -297,7 +297,11 @@ var OpenSpending = OpenSpending || {};
         } else if (type === 'string' || type === 'number') {
           node.id = value;
           node.label = value.slice(5) + '';
-          node.name = value.slice(0, 5);
+          if (value.slice(0, 1) == '0' || value.slice(0, 1) == '1') {
+            node.name = value.slice(0, 3);
+          } else {
+            node.name = value.slice(0, 5);
+          }
         } else {
           throw 'unsupported type: ' + type;
         }
