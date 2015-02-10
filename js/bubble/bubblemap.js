@@ -2,10 +2,10 @@ var OpenSpending = OpenSpending || {};
 
 OpenSpending.getBubbleMapDependencies = function(os_path) {
     return [
-        os_path + '/lib/vendor/base64.js',
-        os_path + '/lib/boot.js',
-        os_path + '/lib/vendor/accounting.js',
-        os_path + '/lib/utils/utils.js',
+        '/js/lib/base64.js',
+        '/js/lib/raphael-min.js',
+        '/js/lib/accounting.js',
+        '/js/lib/utils.js',
         os_path + '/lib/vendor/vis4.js',
         os_path + '/lib/vendor/Tween.js',
         '//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js',
@@ -14,9 +14,9 @@ OpenSpending.getBubbleMapDependencies = function(os_path) {
         os_path + '/lib/vendor/jquery.qtip.min.js',
         os_path + '/lib/vendor/jquery.history.js',
         os_path + '/lib/vendor/bubbletree/1.0/bubbletree.css',
-        os_path + '/lib/vendor/datatables/js/jquery.dataTables.js',
-        os_path + '/lib/vendor/datatables/dataTables.bootstrap.js',
-        os_path + '/app/data_table/openspending.data_table.js',
+        // os_path + '/lib/vendor/datatables/js/jquery.dataTables.js',
+        // os_path + '/lib/vendor/datatables/dataTables.bootstrap.js',
+        // os_path + '/app/data_table/openspending.data_table.js',
         '/css/bubblemap/map.css',
         '/js/lib/aggregator.js',
         '/js/bubble/bubbletree.js',
