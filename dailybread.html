@@ -113,7 +113,7 @@ var initSpendingData = function (region) {
     $('#preloader-' + region.title + ' .txt').html('데이터를 불러오는 중입니다.');
     var db = new OpenSpending.DailyBread($('#dailybread-' + region.title), {'region': region.title});
     new OpenSpending.Aggregator({
-      apiUrl: 'http://openspending.org/api',
+      apiUrl: 'https://openspending.org/api',
       dataset: region.data,
       drilldowns: ['cat1', 'cat2'],
       cuts: ['year:' + OpenSpending.year],
