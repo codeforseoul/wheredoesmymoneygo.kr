@@ -2,7 +2,7 @@ var OpenSpending = OpenSpending || {};
 
 (function ($) {
   var defaultConfig = {
-    siteUrl: 'http://openspending.org',
+    siteUrl: 'https://openspending.org',
     dataset: 'tax_korea_updated',
     drilldowns: ['cat1', 'cat2'],
     cuts: ['year:2012'],
